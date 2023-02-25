@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-$bg: rgb(0, 0, 0); //color of navbar
+$bg: rgb(16, 16, 16); //color of navbar
 
 .header {
   height: 100px;
@@ -35,13 +35,23 @@ $bg: rgb(0, 0, 0); //color of navbar
     margin-left: 4vmax;
 
     > a {
-      margin: 1vmax;
+      margin: 2vmax;
+      font-size: 1.3rem;
+      font-weight: 300;
+
+      &:hover {
+        color: rgb(154, 152, 152);
+      }
     }
   } //div end
 
   > svg {
-    color: white;
+    color: rgb(193, 192, 192);
     font-size: 1.7rem;
     cursor: pointer;
+
+    &:hover {
+      color: rgb(154, 152, 152);
+    }
   }
 } //header end

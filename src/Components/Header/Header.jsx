@@ -10,9 +10,9 @@ const Header = () => {
 
       <div>
         <Link to="/tvshows">TV Shows</Link>
-        <Link to="/tvshows">TV Shows</Link>
-        <Link to="/tvshows">TV Shows</Link>
-        <Link to="/tvshows">TV Shows</Link>
+        <Link to="/movies">Movies</Link>
+        <Link to="/recent">recently Added</Link>
+        <Link to="/mylist">My List</Link>
       </div>
 
       <ImSearch />
