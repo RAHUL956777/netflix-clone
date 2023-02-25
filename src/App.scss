@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Roboto:wght@100;300;400;700;900&display=swap");
+
+// universal styling
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+// style for nav
+a {
+  color: white;
+  text-decoration: none;
+}
+
+$bg: rgb(0, 0, 0); //color of navbar
+
+.header {
+  height: 100px;
+  background-color: $bg;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  cursor: pointer;
+
+  > img {
+    height: 100%;
+  }
+
+  > div {
+    // border: 1px solid red;
+    width: 100%;
+    margin-left: 4vmax;
+
+    > a {
+      margin: 1vmax;
+    }
+  } //div end
+
+  > svg {
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+} //header end
