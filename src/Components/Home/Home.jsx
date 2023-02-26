@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import axios from "axios";
 
 const apiKey = "f5bcb9699ca9b7e7a0eac288bd4ec870";
-const url = "https://api.themoviedb.org/3";
+const url = "https://api.themoviedb.org/3/movie";
 const upComing = "upcoming";
 
 const Card = ({ img }) => <img className="card" src={img} alt="cover" />;
@@ -35,10 +35,14 @@ const Row = ({
 );
 
 const Home = () => {
+  const [upcoming, setupcoming] = useState([]);
+
   useEffect(() => {
     const fecthUpcoming = async () => {
-      const { data } = await axios.get(`${url}/${upComing}/?api_key=${apiKey}`);
-      console.log(data);
+      const {
+        data: { results },
+      } = await axios.get(`${url}/${upComing}/?api_key=${apiKey}`);
+      setupcoming(results);
     };
 
     fecthUpcoming();
